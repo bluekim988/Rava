@@ -28,9 +28,14 @@ class ClsDay10{
 	}
 }
 public class Ex05 {
-
+	
+	double clsAvg;
+	
 	public void randomScore(ClsDay10...cls) {
 		
+		for(int i=0; i<cls.length; i++) {
+			cls[i]
+		}
 	}
 	
 	
