@@ -16,7 +16,7 @@ class MySubjectScore {
 	int math;
 	int phys;
 	int cor;
-	int sum;
+	double sum;
 	double avg;
 	
 	
@@ -51,7 +51,7 @@ class MySubjectScore {
 		avg = sum / score.length;
 		int no = score.length;
 		
-		System.out.printf("[ ÀÌ¸§: %4s  || °ú¸ñ¼ö: %2d ] \nÃÑÁ¡: %3d \nÆò±Õ: %.2f \n",name, no, sum, avg);
+		System.out.printf("[ ÀÌ¸§: %4s  || °ú¸ñ¼ö: %2d ] \nÃÑÁ¡: %.0f \nÆò±Õ: %.2f \n",name, no, sum, avg);
 	}
 	
 	public void showMyAllScore() {
@@ -71,7 +71,7 @@ public class Ex06 {
 		st1.showMyAvg(st1.kor, st1.eng, st1.math);
 		
 		MySubjectScore st2 = new MySubjectScore("¹ÝÀå´Ô");
-		st2.showMyAvg(st2.cor, st2.eng);
+		st2.showMyAvg(st2.cor, st2.eng, st2.kor, st2.math);
 
 	}
 
