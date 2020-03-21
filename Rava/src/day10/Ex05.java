@@ -10,21 +10,38 @@ package day10;
  */
 
 class ClsDay10{
-	String name;
-	int[] score;
-	
-	
-	public ClsDay10() {} 
+	//이 클래스는 한 반의 학생수를 랜덤하게 발생시켜준다.
+	// 또한 각 학생들의 점수도 랜덤하게 발생시켜준다.
+	// 단 한 반의 학생수는 10 ~ 25로 한정한다.
+	// 단 한 학생의 수강 과목은 3 ~ 5 과목으로 한정한다.
+	int[][] member; 
 
-	public ClsDay10(String name, int...num) {
-		this.name = name;
-		score = new int[num.length];
-		
-		for(int i=0; i<num.length; i++) {
-			
-			score[i] = num[i];
-		
+	public ClsDay10() {
+		int memberNo = (int)(Math.random() * 16) + 10;	
+		member = new int[memberno];		
+	}
+	
+	public void setSubject() {
+		for(int i=0; i<member.length; i++) {
+			int subjectNo = (int)(Math.random() * 3) + 3;	
+			member[i][subjectNo];
 		}
+	}
+	
+	public void setScore() {
+//		for(int i=0; i<meber)
+	}
+}
+
+class ScoreSum {
+	int sum;
+	double avg;
+	
+	Public ScoreSum(int...score) {
+		for(int i=0; i<score.length; i++) {
+			sum += score[i];
+		}
+		avg = sum / score.length;
 	}
 }
 public class Ex05 {
