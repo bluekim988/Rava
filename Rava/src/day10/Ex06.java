@@ -58,7 +58,7 @@ class MySubjectScore {
 		System.out.printf("¿Ã∏ß: %4s \nkor: %3d eng: %3d math: %3d phys: %3d cor: %3d",name, eng, math, phys, cor);
 	}
 	
-	public int randomScore() {
+	private int randomScore() {
 		int score = (int)(Math.random() * 41) + 60;
 		return score;
 	}
