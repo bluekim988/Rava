@@ -14,12 +14,40 @@ import java.util.regex.*;
 import javax.swing.*;
 
 public class Ex01 {
-
-	public static void main(String[] args) {
+	
+	public Ex01() {
+		pw();
+	}
+	
+	public void pw() {
+		String pw = JOptionPane.showInputDialog("패스워드를 입력하세요");
+		Pattern pt = Pattern.compile("^(?=.*[\\W])(?=.*[a-zA-Z])(?=.*[\\d])[\\Wa-zA-Z\\d]{8,}$");
+		Matcher mt = pt.matcher(pw);
+		
+		String str = "잘못된 pw 형식입니다.";
+		if(mt.matches()) {
+			str = "패스워드가 입력되어졌습니다";
+		}
+		
+		JOptionPane.showMessageDialog(null, str);
+		
+	}
+	
+	public void id() {
+		String id = JOptionPane.showInputDialog("아이디를 입력하세요");
+		Pattern pt = Pattern.compile("^([a-z\\d_-]{5,15})$");
+		Matcher mt = pt.matcher(id);
+		
+		String str = "잘못된 id 형식입니다.";
+		if(mt.matches()) {
+			str = "아이디가 만들어졌습니다";
+		}
+		
+		JOptionPane.showMessageDialog(null, str);
+	}
+	public void email() {
 		String mail = JOptionPane.showInputDialog("이메일을 입력하세요");
-		
-		Pattern pattern = Pattern.compile("^[\\w._%+-]+@[a-zA-Z]+\\.[a-zA-Z]+\\.[a-zA-Z]{2,6}$");
-		
+		Pattern pattern = Pattern.compile("^([a-z0-9_\\.-]+)@([\\da-z]+)\\.([a-z\\.]{2,6}$)");	
 		Matcher matcher = pattern.matcher(mail);
 		
 		String str = "잘못된 이메일 형식입니다";
@@ -28,6 +56,10 @@ public class Ex01 {
 		}
 		
 		JOptionPane.showMessageDialog(null, str);
+	}
+
+	public static void main(String[] args) {
+		new Ex01();
 	}
 
 }
