@@ -18,7 +18,7 @@ public class Ex01 {
 	public static void main(String[] args) {
 		String mail = JOptionPane.showInputDialog("이메일을 입력하세요");
 		
-		Pattern pattern = Pattern.compile("^[\\w]{8,}@[a-zA-Z]*\\.[a-zA-Z]{2,}\\.?[a-zA-Z]{2,}$");
+		Pattern pattern = Pattern.compile("^[\\w._%+-]+@[a-zA-Z]+\\.[a-zA-Z]+\\.[a-zA-Z]{2,6}$");
 		
 		Matcher matcher = pattern.matcher(mail);
 		
