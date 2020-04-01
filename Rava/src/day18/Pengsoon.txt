@@ -1,0 +1,6 @@
+#####\uD504\uB78D\uD30C\uC77C####
+#Wed Apr 01 10:55:32 KST 2020
+age=30
+tel=010-2222-2222
+name=\uAE40\uC18C\uC601
+addr=\uC11C\uC6B8\uC2DC \uC2E0\uB9BC\uB3D9
