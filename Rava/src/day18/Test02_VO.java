@@ -104,4 +104,5 @@ public class Test02_VO {
 		str.append("|").append(sum).append("|").append(avg).append("|").append("\n");
 		return str.toString();
 	}
+
 }
