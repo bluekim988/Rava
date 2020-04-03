@@ -37,5 +37,13 @@ public class AddMember01 {
 		new AddMember01();
 
 	}
-
+/*
+ ALTER TABLE
+    member
+    ADD(
+        joinDate DATE DEFAULT SYSDATE
+            CONSTRAINT MEMB_JOIN_NN NOT NULL
+);
+ */
 }
+
